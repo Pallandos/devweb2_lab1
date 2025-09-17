@@ -16,4 +16,6 @@ See in the [imgs](./imgs/) folder.
 
 ![put failure](./imgs/put_failure.png)
 
+`DELETE` request :
+
 ![delete](./imgs/delete.png)
