@@ -10,6 +10,18 @@ const server = http.createServer(async (request, response) => {
         response.writeHead(200, { 'Content-Type': 'application/json' })
         response.end(JSON.stringify(todos))
     }
+    // GET only one todo
+    else if (request.url.match(/^\/api\/todos\/([0-9]+)$/) && request.method === 'GET') {
+        const id = parseInt(request.url.split('/')[3])
+        const todo = todos.find(t => t.id === id)
+        if (!todo) {
+            response.writeHead(404, { 'Content-Type': 'application/json' })
+            response.end(JSON.stringify({ message: 'Todo not found' }))
+        } else {
+            response.writeHead(200, { 'Content-Type': 'application/json' })
+            response.end(JSON.stringify(todo))
+        }
+    }
     else if (request.url === '/api/todos' && request.method === 'POST') {
         let req_body = await getRequestData(request)
         let todo = JSON.parse(req_body)
