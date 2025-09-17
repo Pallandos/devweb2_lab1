@@ -45,3 +45,7 @@ Here is what it looks like :
 As expected, if you do not change the port in your API client you will get an error : `Connection was refused by the server.`. Every other features will stay exactly the same if you connect to the good port.
 
 ### Activity 4
+
+For activity 4, i added an other server that you can launch with `npm start_shop` or `npm autorun_shop`. 
+
+The endpoint is `localhost:4000/pets`.

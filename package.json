@@ -17,7 +17,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
-    "autostart": "nodemon src/server.js"
+  "autostart": "nodemon src/server.js",
+  "start_shop": "node src/shop_server.js",
+  "autorun_shop": "nodemon src/shop_server.js"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
